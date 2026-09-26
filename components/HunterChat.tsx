@@ -25,12 +25,24 @@ export default function HunterChat() {
   const isLoading = status === "streaming" || status === "submitted";
 
   useEffect(() => {
+    const handleOpen = () => setIsOpen(true);
+    window.addEventListener('open-hunter-chat', handleOpen);
+    return () => window.removeEventListener('open-hunter-chat', handleOpen);
+  }, []);
+
+  useEffect(() => {
+    let handleEscape: (e: KeyboardEvent) => void;
     if (isOpen) {
       const scrollY = window.scrollY;
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
       document.body.style.overflow = "hidden";
+      
+      handleEscape = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setIsOpen(false);
+      };
+      window.addEventListener('keydown', handleEscape);
     } else {
       const scrollY = document.body.style.top;
       document.body.style.position = "";
@@ -44,6 +56,7 @@ export default function HunterChat() {
       document.body.style.top = "";
       document.body.style.width = "";
       document.body.style.overflow = "";
+      if (handleEscape) window.removeEventListener('keydown', handleEscape);
     };
   }, [isOpen]);
 

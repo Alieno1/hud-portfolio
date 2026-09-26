@@ -232,7 +232,7 @@ export default function Page() {
             className="relative z-10 flex flex-col min-h-screen"
           >
             {/* ── UTILITY NAVBAR ─────────────────────────────────── */}
-            <div className="flex flex-col md:flex-row items-center justify-between px-6 py-4 sticky top-0 z-[100]"
+            <div className="flex flex-col md:flex-row items-center justify-between px-6 py-4 fixed top-0 w-full z-[100]"
               style={{ borderBottom: "1px solid rgba(0,255,65,0.2)", background: "rgba(13,17,23,0.9)", backdropFilter: "blur(12px)" }}>
               
               {/* Left */}
@@ -253,19 +253,24 @@ export default function Page() {
                 <a href="#projects" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Projects</a>
                 <a href="#skills" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Skills</a>
                 <a href="#experience" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Experience</a>
-                <a href="#chat" className="whitespace-nowrap text-[#00FF41]">AI Assistant</a>
+                <button 
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-hunter-chat'))}
+                  className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all cursor-pointer uppercase"
+                >
+                  AI Assistant
+                </button>
               </div>
 
               {/* Right */}
               <div className="flex items-center gap-4 text-[#A0A5B5] text-[0.65rem] font-jetbrains tracking-wide uppercase mt-4 md:mt-0">
+                <button onClick={() => setIsLightMode(!isLightMode)} className="cursor-pointer hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="hidden md:inline">Light Mode</span> {isLightMode ? '🌙' : '☀️'}
+                </button>
                 <a href="/Resume.pdf" download="Himanshu_Singh_Resume.pdf" className="border border-[#A0A5B5]/40 px-2 py-1 rounded hover:text-[#00FF41] hover:border-[#00FF41]/60 transition-colors">
                   Download CV 📄
                 </a>
                 <div className="hidden xl:flex items-center gap-4 border-l border-[#A0A5B5]/30 pl-4">
                   <span className="cursor-pointer hover:text-white">Accessibility: HIGH 👁</span>
-                  <button onClick={() => setIsLightMode(!isLightMode)} className="cursor-pointer hover:text-white transition-colors">
-                    Light Mode {isLightMode ? '🌙' : '🌗'}
-                  </button>
                   <span className="flex items-center gap-1.5 cursor-help" title="Hunter Edge APIs">
                     API Status: ONLINE <span className="w-2 h-2 rounded-full bg-[#00FF41] shadow-[0_0_5px_#00FF41]" />
                   </span>
@@ -274,7 +279,7 @@ export default function Page() {
             </div>
 
             {/* ── FULL SCREEN CONTENT (3-COLUMN CSS GRID) ────────────── */}
-            <div className="flex-1 w-full px-4 md:px-6 xl:px-8 py-6 pointer-events-auto overflow-hidden">
+            <div className="flex-1 w-full px-4 md:px-6 xl:px-8 pb-6 pointer-events-auto overflow-hidden pt-[140px] md:pt-[100px]">
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mx-auto w-full max-w-[2000px]">
                 
                 {/* ── LEFT COLUMN: Identity & Sys Log ── */}
