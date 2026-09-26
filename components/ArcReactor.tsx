@@ -100,7 +100,12 @@ function ChakraSphere() {
 
 export default function ArcReactor() {
   return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 50 }} style={{ position: "absolute", inset: 0 }} gl={{ antialias: true, alpha: true }}>
+    <Canvas
+      camera={{ position: [0, 0, 5], fov: 50 }}
+      style={{ position: "absolute", inset: 0 }}
+      gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
+      dpr={[1, 1.5]}
+    >
       <ChakraSphere />
     </Canvas>
   );

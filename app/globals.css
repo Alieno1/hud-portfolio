@@ -4,6 +4,7 @@
 :root {
   /* ─── COLOUR PALETTE (CYBER/HACKER) ───────────── */
   --void:         #0D1117;
+  --void-rgb:     13,17,23;
   --panel-bg:     rgba(13, 17, 23, 0.85);
   --primary:      #00FF41;
   --primary-dim:  #00CC33;
@@ -19,7 +20,8 @@
 }
 
 [data-theme="light"] {
-  --void:         #F8FAFC;
+  --void:         #F0F4F8;
+  --void-rgb:     240,244,248;
   --panel-bg:     rgba(255, 255, 255, 0.9);
   --primary:      #00B336;
   --primary-dim:  #008F2B;
@@ -397,3 +399,16 @@ html[data-theme="light"], [data-theme="light"] body {
 /* Fix Top Navbar Inline Style */
 [data-theme="light"] [style*="rgba(13,17,23"] { background: rgba(255,255,255,0.9) !important; }
 [data-theme="light"] [style*="rgba(0,255,65"] { border-bottom-color: rgba(5, 150, 105, 0.2) !important; }
+
+/* Fix hover:text-white in light mode — white on white = invisible */
+[data-theme="light"] [class*="hover:text-white"]:hover { color: #0F172A !important; }
+[data-theme="light"] [class*="hover:text-[#fff]"]:hover { color: #0F172A !important; }
+/* Also fix muted text that's too light on light backgrounds */
+[data-theme="light"] [class*="text-[#A0A5B5]"] { color: #475569 !important; }
+
+/* Ensure contact buttons (LinkedIn/GitHub/Email) are always visible on hover in light mode */
+[data-theme="light"] [class*="hover:text-[#00FF41]"]:hover {
+  color: #059669 !important;
+  background-color: rgba(5, 150, 105, 0.08) !important;
+  text-shadow: none !important;
+}

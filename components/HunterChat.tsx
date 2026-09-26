@@ -110,7 +110,7 @@ export default function HunterChat() {
             exit={{ opacity: 0, y: 16, scale: 0.95 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="panel flex flex-col overflow-hidden"
-            style={{ width: "min(480px, calc(100vw - 48px))", height: "560px", background: "#0D1117", borderColor: "#00FF41" }}
+            style={{ width: "min(480px, calc(100vw - 48px))", height: "min(560px, calc(100dvh - 120px))", background: "#0D1117", borderColor: "#00FF41" }}
           >
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 flex-shrink-0 border-b border-[#00FF41]/30 bg-[#00FF41]/10">

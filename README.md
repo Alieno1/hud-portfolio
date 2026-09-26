@@ -1,53 +1,95 @@
-# Cybernetic AI Portfolio
+# 🖥️ Himanshu Singh — Cyber HUD Portfolio
 
-An immersive, high-performance developer portfolio engineered with a cutting-edge cyberpunk aesthetic. Built for modern backend and AI engineers, this portfolio orchestrates seamless CSS grids, performant Framer Motion animations, and features an integrated smart AI Agent running on Edge architecture.
+> **Live:** [https://hud-portfolio.vercel.app](https://hud-portfolio.vercel.app)
 
-## 🚀 Key Features
+A JARVIS-style, hacker-aesthetic portfolio built for Backend & AI Engineers. Features a live AI assistant powered by GPT-4o-mini, a 3D interactive arc reactor, dual dark/light theme engine, and full mobile responsiveness.
 
-* **Three-Column Grid Architecture**: A responsive, space-optimized layout that logically separates Base Identity, Technical Arsenal, and Active Projects.
-* **Integrated AI Copilot (Hunter)**: A persistent, cyber-themed floating terminal powered by the Vercel AI SDK. Capable of instantly answering questions about the developer's background, skillset, and intricate project architectures.
-* **Light / Dark Mode Accessibility**: Custom data-theme toggling that intelligently inverts the neon-slate palette to a highly readable daylight aesthetic via native CSS variables.
-* **ATS-Compliant Integration**: Direct functionality to instantly extract traditional PDF dossiers for recruiters and automated tracking systems.
-* **Cybernetic Micro-Interactions**: Custom "Arc Reactor" background mesh, aggressive iOS-compatible overlay scroll locks, CRT scanline overlays, and neon pulse CSS behaviors.
+---
 
-## 💻 Tech Stack
+## ✨ Features
 
-* **Core Framework**: React 18 & Next.js (App Router)
-* **Styling**: Tailwind CSS & native CSS variable injections
-* **Animations**: Framer Motion & CSS Keyframes
-* **AI Integration**: Vercel AI SDK & OpenRouter (GPT-4o-mini)
-* **Icons**: Lucide React
-* **Hosting Pipeline**: Vercel Edge Network
+- **Hunter AI Assistant** — Conversational AI (GPT-4o-mini via OpenRouter) with full portfolio context, Markdown rendering, suggestion chips, and mobile-optimized terminal UI
+- **Dual Theme Engine** — Cyberpunk dark mode (default) + Corporate-Cyberpunk light mode, toggled via CSS variable override system with no JS re-renders
+- **3D Arc Reactor** — Interactive Three.js WebGL background with mouse-tracking orbital rings, dynamically loaded (SSR-disabled)
+- **Boot Sequence Animation** — Cinematic terminal boot sequence on first load via Framer Motion
+- **Sticky Fixed Navbar** — Always-visible header with smooth section anchors, AI Assistant toggle, and light/dark mode switcher
+- **Keyboard Shortcuts** — `Escape` closes the AI chat; `AI ASSISTANT` header button toggles open/close
+- **Mobile Back-Button Support** — HTML5 History API intercepts the mobile back gesture to close the chat modal instead of leaving the page
+- **Responsive Design** — Adaptive 3-column CSS grid (desktop) → 2-column (tablet) → 1-column (mobile)
 
-## 🛠️ Local Development Setup
+---
 
-To run this project locally on your machine:
+## 🛠️ Tech Stack
 
-1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/Alieno1/hud-portfolio.git
-   cd hud-portfolio
-   \`\`\`
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16.3.6 (App Router) |
+| Language | TypeScript |
+| Styling | TailwindCSS v4 + Vanilla CSS Variables |
+| Animations | Framer Motion |
+| 3D Graphics | Three.js + @react-three/fiber + @react-three/drei |
+| AI Chat | Vercel AI SDK v7 + OpenRouter (GPT-4o-mini) |
+| Icons | Lucide React |
+| Deployment | Vercel |
 
-2. Install dependencies:
-   \`\`\`bash
-   npm install
-   \`\`\`
+---
 
-3. Authenticate the AI Copilot:
-   Create a \`.env.local\` file in the root directory and add your OpenRouter API Key:
-   \`\`\`env
-   OPENROUTER_API_KEY=sk-or-v1-your-key-here
-   \`\`\`
+## 🚀 Getting Started
 
-4. Boot the system:
-   \`\`\`bash
-   npm run dev
-   \`\`\`
+```bash
+# Clone the repo
+git clone https://github.com/Alieno1/hud-portfolio.git
+cd hud-portfolio
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the live boot sequence.
+# Install dependencies
+npm install
 
-## 🌐 Production Deployment
+# Set up environment variables
+cp .env.local.example .env.local
+# Add your OPENROUTER_API_KEY
 
-This Next.js application is heavily optimized for zero-config deployment on Vercel. 
-Simply import the GitHub repository into the Vercel Dashboard, map the \`OPENROUTER_API_KEY\` into the Environment Variables payload, and hit deploy. The Next.js compiler will automatically SSG (Static Site Generate) the UI elements and assign the AI backend to an Edge Function.
+# Run locally
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🔑 Environment Variables
+
+| Variable | Description |
+|---|---|
+| `OPENROUTER_API_KEY` | API key from [openrouter.ai](https://openrouter.ai) |
+
+---
+
+## 📁 Project Structure
+
+```
+hud-portfolio/
+├── app/
+│   ├── api/chat/        # AI chat API route (OpenRouter)
+│   ├── globals.css      # CSS variable theme engine (dark + light)
+│   ├── layout.tsx       # Root layout with SEO metadata
+│   ├── page.tsx         # Main UI — navbar, grid, panels
+│   └── sitemap.ts       # Auto-generated sitemap for SEO
+├── components/
+│   ├── ArcReactor.tsx   # Three.js 3D interactive background
+│   ├── BootSequence.tsx # Terminal boot animation
+│   └── HunterChat.tsx   # AI chat assistant component
+├── lib/
+│   └── data.ts          # Centralised portfolio content & data
+└── public/
+    ├── Resume.pdf        # Downloadable CV
+    └── robots.txt        # SEO crawler config
+```
+
+---
+
+## 👤 Author
+
+**Himanshu Singh** — Backend & AI Engineer, NIT Surat (SVNIT)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/himanshu-singh-7ab162243)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Alieno1)
