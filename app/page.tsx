@@ -259,7 +259,7 @@ export default function Page() {
               {/* Right */}
               <div className="flex items-center gap-4 text-[#A0A5B5] text-[0.65rem] font-jetbrains tracking-wide uppercase mt-4 md:mt-0">
                 <a href="/Resume.pdf" download="Himanshu_Singh_Resume.pdf" className="border border-[#A0A5B5]/40 px-2 py-1 rounded hover:text-[#00FF41] hover:border-[#00FF41]/60 transition-colors">
-                  Extract Operations Dossier [CV] 📄
+                  Download CV 📄
                 </a>
                 <div className="hidden xl:flex items-center gap-4 border-l border-[#A0A5B5]/30 pl-4">
                   <span className="cursor-pointer hover:text-white">Accessibility: HIGH 👁</span>
