@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cybernetic AI Portfolio
 
-## Getting Started
+An immersive, high-performance developer portfolio engineered with a cutting-edge cyberpunk aesthetic. Built for modern backend and AI engineers, this portfolio orchestrates seamless CSS grids, performant Framer Motion animations, and features an integrated smart AI Agent running on Edge architecture.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Three-Column Grid Architecture**: A responsive, space-optimized layout that logically separates Base Identity, Technical Arsenal, and Active Projects.
+* **Integrated AI Copilot (Hunter)**: A persistent, cyber-themed floating terminal powered by the Vercel AI SDK. Capable of instantly answering questions about the developer's background, skillset, and intricate project architectures.
+* **Light / Dark Mode Accessibility**: Custom data-theme toggling that intelligently inverts the neon-slate palette to a highly readable daylight aesthetic via native CSS variables.
+* **ATS-Compliant Integration**: Direct functionality to instantly extract traditional PDF dossiers for recruiters and automated tracking systems.
+* **Cybernetic Micro-Interactions**: Custom "Arc Reactor" background mesh, aggressive iOS-compatible overlay scroll locks, CRT scanline overlays, and neon pulse CSS behaviors.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Core Framework**: React 18 & Next.js (App Router)
+* **Styling**: Tailwind CSS & native CSS variable injections
+* **Animations**: Framer Motion & CSS Keyframes
+* **AI Integration**: Vercel AI SDK & OpenRouter (GPT-4o-mini)
+* **Icons**: Lucide React
+* **Hosting Pipeline**: Vercel Edge Network
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Local Development Setup
 
-## Learn More
+To run this project locally on your machine:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/Alieno1/hud-portfolio.git
+   cd hud-portfolio
+   \`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Authenticate the AI Copilot:
+   Create a \`.env.local\` file in the root directory and add your OpenRouter API Key:
+   \`\`\`env
+   OPENROUTER_API_KEY=sk-or-v1-your-key-here
+   \`\`\`
 
-## Deploy on Vercel
+4. Boot the system:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the live boot sequence.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Production Deployment
+
+This Next.js application is heavily optimized for zero-config deployment on Vercel. 
+Simply import the GitHub repository into the Vercel Dashboard, map the \`OPENROUTER_API_KEY\` into the Environment Variables payload, and hit deploy. The Next.js compiler will automatically SSG (Static Site Generate) the UI elements and assign the AI backend to an Edge Function.
