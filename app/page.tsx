@@ -248,12 +248,12 @@ export default function Page() {
                 </span>
               </div>
 
-              {/* Center */}
-              <div className="hidden lg:flex items-center gap-8 font-jetbrains text-[#A0A5B5] text-[0.7rem] uppercase tracking-widest">
-                <a href="#projects" className="hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Projects</a>
-                <a href="#skills" className="hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Skills</a>
-                <a href="#experience" className="hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Experience</a>
-                <a href="#chat" className="text-[#00FF41]">AI Assistant</a>
+              {/* Center - Scrollable Nav for all devices */}
+              <div className="flex overflow-x-auto w-full md:w-auto hidescrollbar items-center gap-6 font-jetbrains text-[#A0A5B5] text-[0.7rem] uppercase tracking-widest mt-3 md:mt-0 pb-2 md:pb-0 px-2">
+                <a href="#projects" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Projects</a>
+                <a href="#skills" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Skills</a>
+                <a href="#experience" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Experience</a>
+                <a href="#chat" className="whitespace-nowrap text-[#00FF41]">AI Assistant</a>
               </div>
 
               {/* Right */}
@@ -308,7 +308,23 @@ export default function Page() {
                     </div>
 
                     <div className="separator my-5" />
-                    <p className="bio-text text-[0.85rem]">{BIO}</p>
+                    
+                    <div className="mb-4 space-y-2">
+                      <div className="flex items-start gap-2 text-[#E2E8F0]">
+                        <span className="text-[#00FF41]">{'>'}</span>
+                        <p className="font-jetbrains text-[0.85rem] leading-tight">Hi! I'm Himanshu, a Backend Engineer obsessed with building high-performance logic engines and AI pipelines.</p>
+                      </div>
+                      <div className="flex items-start gap-2 text-[#E2E8F0]">
+                        <span className="text-[#00FF41]">{'>'}</span>
+                        <p className="font-jetbrains text-[0.85rem] leading-tight">I recently engineered trading infrastructure handling 120k+ ops/sec during my FinTech internship.</p>
+                      </div>
+                      <div className="flex items-start gap-2 text-[#E2E8F0]">
+                        <span className="text-[#00FF41]">{'>'}</span>
+                        <p className="font-jetbrains text-[0.85rem] leading-tight">I design scalable distributed systems and intelligent AI agents.</p>
+                      </div>
+                    </div>
+                    
+                    <p className="bio-text text-[0.75rem] opacity-70 italic border-l-2 border-[#00FF41]/10 pl-3">{BIO}</p>
                   </motion.div>
 
                   {/* SYS LOG / EXPERIENCE */}

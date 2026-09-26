@@ -29,14 +29,14 @@ Frontend: React.js, Node.js, JavaScript, HTML, CSS
 Tools: Git, Postman, Pytest/Mockito, JUnit, DSA, OS, CN, System Design, Cloud Computing, Quant Analytics
 
 PROJECTS (GitHub: Alieno1):
-1. Enterprise AI Copilot — LangChain + Gemini + ChromaDB RAG. Agentic, zero-hallucination enterprise knowledge copilot. (Sep 2026)
-2. Auto-Director — 5-agent pipeline (Scriptwriter/Voice/Visual/Subtitle/Director) text→9:16 micro-drama. FFmpeg+MoviePy+Gemini+ElevenLabs. 49× PIL optimisation. (Jul 2026)
-3. Real-Time Collaborative Editor — FastAPI + Yjs CRDT + WebSocket + Redis pub/sub + Nginx. Google Docs-style multi-instance collab.
-4. Hotel Automation Controller — Java 17 + Spring Boot, power-budgeting, JUnit/Mockito tests. (May 2026)
-5. Retinopathy Screening — Deep learning CV for diabetic retinopathy detection from fundus images.
-6. Middleware Fork — Distributed middleware infrastructure.
-7. Bhabha Bhawan SVNIT Web — React + Vite + TailwindCSS + Framer Motion hostel site.
-8. ICIPE Conference Site — HTML/CSS/JS + Node.js/Express backend.
+1. Enterprise AI Copilot — LangChain · Gemini · ChromaDB · Spring Boot. Decoupled Agentic AI Copilot autonomously routing queries to backend tools. RAG pipeline with ChromaDB for zero-hallucination semantic search. Java Spring Boot architecture facilitating highly scalable data orchestration.
+2. Auto-Director: Micro-Drama Engine — Multi-Agent AI · FFmpeg. Autonomous Agentic pipeline converting raw text into vertical micro-dramas. Java backend integrations to streamline LLM task management with intelligent rate-limit filters.
+3. Real-Time Collaborative Document Editor — FastAPI · Yjs CRDT · WebSocket · Redis. WebSocket sync with Yjs CRDT ensuring conflict-free concurrent editing. Multi-instance deployment with Redis pub/sub synchronisation.
+4. Bhabha Bhawan SVNIT Architecture — React · Vite · TailwindCSS · Framer Motion. Modernized SVNIT hostel network into a high-performance React application. Engineered dynamic UI layers with Framer Motion and an advanced dark-theme aesthetic.
+5. Hotel Automation Controller — Java 17 · Spring Boot · JUnit/Mockito. State-based facility automation engine with automated power-budgeting optimizations. Comprehensive unit testing architecture utilizing JUnit and Mockito.
+6. ICIPE Conference Portal — Node.js · Express. Full-stack web transformation integrating robust Node/Express backend for active form submission workflows.
+7. Distributed Middleware Runtime — Java · Distributed Systems. Scale-out middleware infrastructure components for distributed orchestration and inter-service communication.
+8. Retinopathy Diabetic Prediction — Deep Learning · Vision · Spring Boot. Deep learning classification model for early diabetic retinopathy detection. Java Spring Boot server wrapping ML algorithms for secure API distribution.
 
 COURSES: DSA, DBMS, OS, Computer Networks, Distributed Systems, Cloud Computing, Information Security, HPC, Machine Learning, Deep Learning
 
