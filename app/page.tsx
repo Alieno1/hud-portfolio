@@ -45,7 +45,7 @@ const LinkedinIcon = ({ size = 13 }: { size?: number }) => (
 );
 
 // ─── DATA ──────────────────────────────────────────────────────
-const BIO = `Computer Science graduate from NIT Surat (SVNIT) with a strong passion for Backend Engineering, Artificial Intelligence, and FinTech. During my internship in the fintech sector, I worked on high-performance trading infrastructure, building real-time data pipelines with Apache Kafka and fault-tolerant risk management systems. Fascinated by the intersection of technology, finance, and data, I am driven to build scalable distributed systems, intelligent AI/ML solutions, and algorithmic trading platforms that solve complex real-world problems through efficient, production-ready engineering.`;
+const BIO = `I'm a Computer Science graduate from NIT Surat (SVNIT) with a strong interest in Backend Engineering, Distributed Systems, and Artificial Intelligence. My experience includes building high-throughput data pipelines, fault-tolerant financial systems, and intelligent AI applications.\n\nI'm driven by the challenge of turning complex problems into efficient, scalable, and reliable, production-ready solutions.`;
 
 const SKILL_GROUPS = [
   {
@@ -291,8 +291,8 @@ export default function Page() {
                       HIMANSHU SINGH
                     </h1>
                     <div className="font-jetbrains text-[#A0A5B5] mt-2 text-[0.8rem] tracking-wider uppercase">
-                      BACKEND ENGINEER &amp; AI SPECIALIST <br/>
-                      NIT SURAT (SVNIT)
+                      BACKEND | AI | DISTRIBUTED SYSTEMS <br/>
+                      <span className="text-[#00FF41]/70">NIT SURAT (SVNIT)</span>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-5">
@@ -309,22 +309,31 @@ export default function Page() {
 
                     <div className="separator my-5" />
                     
-                    <div className="mb-4 space-y-2">
+                    <div className="mb-6 space-y-3">
                       <div className="flex items-start gap-2 text-[#E2E8F0]">
-                        <span className="text-[#00FF41]">{'>'}</span>
-                        <p className="font-jetbrains text-[0.85rem] leading-tight">Hi! I'm Himanshu, a Backend Engineer obsessed with building high-performance logic engines and AI pipelines.</p>
+                        <span className="text-[#00FF41] mt-0.5">{'>'}</span>
+                        <p className="font-jetbrains text-[0.82rem] leading-relaxed">
+                          Hi, I'm Himanshu Singh, a Computer Science graduate from NIT Surat, passionate about building high-performance systems and intelligent AI solutions.
+                        </p>
                       </div>
                       <div className="flex items-start gap-2 text-[#E2E8F0]">
-                        <span className="text-[#00FF41]">{'>'}</span>
-                        <p className="font-jetbrains text-[0.85rem] leading-tight">I recently engineered trading infrastructure handling 120k+ ops/sec during my FinTech internship.</p>
+                        <span className="text-[#00FF41] mt-0.5">{'>'}</span>
+                        <p className="font-jetbrains text-[0.82rem] leading-relaxed">
+                          During my FinTech internship, I worked on real-time trading infrastructure processing <strong className="text-[#00FF41] font-bold">120K+ market tick messages per second</strong>, along with fault-tolerant risk management systems.
+                        </p>
                       </div>
                       <div className="flex items-start gap-2 text-[#E2E8F0]">
-                        <span className="text-[#00FF41]">{'>'}</span>
-                        <p className="font-jetbrains text-[0.85rem] leading-tight">I design scalable distributed systems and intelligent AI agents.</p>
+                        <span className="text-[#00FF41] mt-0.5">{'>'}</span>
+                        <p className="font-jetbrains text-[0.82rem] leading-relaxed">
+                          I explore the intersection of <strong className="text-[#00FF41] font-bold">technology, finance, and AI</strong>, building scalable distributed systems, intelligent AI agents, and data-driven solutions that turn complex challenges into efficient, production-ready systems.
+                        </p>
                       </div>
                     </div>
                     
-                    <p className="bio-text text-[0.75rem] opacity-70 italic border-l-2 border-[#00FF41]/10 pl-3">{BIO}</p>
+                    <div className="bg-[#00FF41]/5 border-l-2 border-[#00FF41]/30 p-3 rounded-r mb-2">
+                       <h3 className="font-jetbrains text-[#00FF41] font-bold text-[0.7rem] uppercase tracking-wider mb-2">ABOUT ME</h3>
+                       <p className="bio-text text-[0.78rem] whitespace-pre-line opacity-90">{BIO}</p>
+                    </div>
                   </motion.div>
 
                   {/* SYS LOG / EXPERIENCE */}
