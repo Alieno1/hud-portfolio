@@ -254,7 +254,7 @@ export default function Page() {
                 <a href="#skills" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Skills</a>
                 <a href="#experience" className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all">Experience</a>
                 <button 
-                  onClick={() => window.dispatchEvent(new CustomEvent('open-hunter-chat'))}
+                  onClick={() => window.dispatchEvent(new CustomEvent('toggle-hunter-chat'))}
                   className="whitespace-nowrap hover:text-[#00FF41] hover:underline underline-offset-4 decoration-[#00FF41]/50 transition-all cursor-pointer uppercase"
                 >
                   AI Assistant

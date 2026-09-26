@@ -25,9 +25,9 @@ export default function HunterChat() {
   const isLoading = status === "streaming" || status === "submitted";
 
   useEffect(() => {
-    const handleOpen = () => setIsOpen(true);
-    window.addEventListener('open-hunter-chat', handleOpen);
-    return () => window.removeEventListener('open-hunter-chat', handleOpen);
+    const handleToggle = () => setIsOpen(prev => !prev);
+    window.addEventListener('toggle-hunter-chat', handleToggle);
+    return () => window.removeEventListener('toggle-hunter-chat', handleToggle);
   }, []);
 
   useEffect(() => {
