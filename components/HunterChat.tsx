@@ -210,7 +210,7 @@ export default function HunterChat() {
 
               {/* Terminal Input */}
               <form onSubmit={handleSubmit} className="px-4 py-2 flex items-center gap-2">
-                <span className="font-jetbrains text-[0.75rem] text-[#00FF41]">hunter@user:~$</span>
+                <span className="font-jetbrains text-[0.75rem] text-[#00FF41]">guest@system:~$</span>
                 <input
                   value={inputValue} onChange={e => setInputValue(e.target.value)}
                   placeholder="ask hunter..." disabled={isLoading}
