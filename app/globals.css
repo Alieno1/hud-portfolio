@@ -314,3 +314,86 @@ a.cyber-link:hover {
   font-family: 'Inter', sans-serif;
   font-size: 1rem; color: #E2E8F0; line-height: 1.8; font-weight: 400;
 }
+
+/* ─── CYBER PREP (LIGHT MODE) SUBSTRING OVERRIDES ─────────── */
+/* Force override the background for light mode */
+html[data-theme="light"], [data-theme="light"] body {
+  background: var(--void) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="light"] {
+  --void: #F0F4F8; /* Icy Cyber-White */
+  --primary: #059669; /* Deep tech emerald */
+  --text-main: #0F172A; /* Slate 900 for absolute contrast */
+}
+
+/* Panel & Project Card Base Class Overrides */
+[data-theme="light"] .panel {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(5, 150, 105, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+[data-theme="light"] .panel::before {
+  background: linear-gradient(90deg, transparent, #059669, transparent) !important;
+  box-shadow: 0 0 10px #059669 !important;
+}
+[data-theme="light"] .project-card {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(5, 150, 105, 0.2) !important;
+  border-left: 4px solid #059669 !important;
+}
+[data-theme="light"] .project-card:hover {
+  background: rgba(240, 245, 255, 0.9) !important;
+  border-left-color: #059669 !important;
+  box-shadow: 0 5px 15px rgba(5, 150, 105, 0.1) !important;
+  transform: translateY(-2px);
+}
+[data-theme="light"] .metric-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(5, 150, 105, 0.2) !important;
+}
+[data-theme="light"] .skill-badge {
+  background: rgba(5, 150, 105, 0.05) !important;
+  border: 1px solid rgba(5, 150, 105, 0.3) !important;
+  color: #0F172A !important;
+}
+[data-theme="light"] .skill-badge:hover {
+  background: #059669 !important;
+  color: #FFF !important;
+  border-color: #059669 !important;
+  box-shadow: 0 0 12px rgba(5, 150, 105, 0.4) !important;
+  text-shadow: none !important;
+}
+
+/* ─── AGGRESSIVE TAILWIND CLASS OVERRIDES ─── */
+/* Text Overrides - Substring match catches `/70`, etc. */
+[data-theme="light"] [class*="text-[#E2E8F0]"] { color: #1E293B !important; }
+[data-theme="light"] [class*="text-[#A0A5B5]"] { color: #475569 !important; }
+[data-theme="light"] [class*="text-[#00FF41]"] { color: #059669 !important; }
+
+/* Background Overrides */
+[data-theme="light"] [class*="bg-[#0D1117]"] { background-color: rgba(255,255,255,0.9) !important; }
+[data-theme="light"] [class*="bg-[#00FF41]"] { background-color: rgba(5, 150, 105, 0.08) !important; }
+
+/* Border Overrides */
+[data-theme="light"] [class*="border-[#00FF41]"] { border-color: rgba(5, 150, 105, 0.3) !important; }
+[data-theme="light"] [class*="border-[#A0A5B5]"] { border-color: rgba(71, 85, 105, 0.3) !important; }
+
+/* Effects and Formats */
+[data-theme="light"] .bio-text { color: #334155 !important; }
+[data-theme="light"] .section-header { color: #059669 !important; }
+[data-theme="light"] .section-header::before { background: #059669 !important; box-shadow: 0 0 8px #059669 !important; }
+[data-theme="light"] .bullet-line::before { color: #059669 !important; }
+[data-theme="light"] .text-neon { color: #059669 !important; text-shadow: none !important; font-weight: 700; }
+[data-theme="light"] .tech-ring { border-color: #059669 !important; }
+
+/* Hover Overrides (Explicit to beat tailwind specificity) */
+[data-theme="light"] [class*="hover:text-[#00FF41]"]:hover { color: #059669 !important; }
+[data-theme="light"] [class*="hover:border-[#00FF41]"]:hover { border-color: #059669 !important; }
+[data-theme="light"] .group:hover [class*="group-hover:text-[#00FF41]"] { color: #059669 !important; text-shadow: none !important; }
+[data-theme="light"] [class*="hover:bg-[#00FF41]"]:hover { background-color: rgba(5, 150, 105, 0.15) !important; }
+
+/* Fix Top Navbar Inline Style */
+[data-theme="light"] [style*="rgba(13,17,23"] { background: rgba(255,255,255,0.9) !important; }
+[data-theme="light"] [style*="rgba(0,255,65"] { border-bottom-color: rgba(5, 150, 105, 0.2) !important; }
